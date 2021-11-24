@@ -1,5 +1,5 @@
-from Program.displaying_and_text_manipulation import view_text, combining_multiple_texts_into_one, \
-    removing_white_spaces_at_the_end_text, removing_white_spaces_at_the_end_text
+from program.logic.displaying_and_text_manipulation import view_text, combining_multiple_texts_into_one, \
+    removing_white_spaces_at_the_end_text
 
 
 def test_view_text():
