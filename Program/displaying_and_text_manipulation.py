@@ -6,8 +6,8 @@ def combining_multiple_texts_into_one(*texts):
     combining_text = ''
     for count in range(len(texts)):
         combining_text += texts[count] + ' '
-    else:
-        removing_white_spaces_at_the_end_text(combining_text)
+
+    combining_text = removing_white_spaces_at_the_end_text(combining_text)
     return combining_text
 
 
