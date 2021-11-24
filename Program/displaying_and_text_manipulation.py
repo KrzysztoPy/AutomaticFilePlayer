@@ -12,8 +12,13 @@ def combining_multiple_texts_into_one(*texts):
 
 
 def removing_white_spaces_at_the_end_text(text):
+    if text == '' or text == ' ':
+        return ''
+
     for count in range(len(text) - 1, 0, -1):
         if text[count] == ' ':
-            text[count] = ''
+            text = text[:-1]
         else:
-            break
+            return text
+
+    return text
