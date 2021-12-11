@@ -92,6 +92,20 @@ class TestMainLabel(unittest.TestCase):
             new_main_label_obj = NewMainLabel('Correctness name', sample[0], sample[1])
             self.assertEqual((width // sample[0], height // sample[1]), new_main_label_obj.set_size_main_label())
 
+        del new_main_label_obj
+
+    def test_return_the_center_position_of_the_main_window(self):
+        width, height = pyautogui.size()
+        samples = ((1, 1), (2, 5))
+
+        expected_result = ((width // 2 - (width // samples[0][0]) // 2, height // 2 - (height // samples[0][1]) // 2),
+                           (width // 2 - (width // samples[1][0]) // 2, height // 2 - (height // samples[1][1]) // 2))
+
+        for index in range(0, len(samples)):
+            new_main_label_obj = NewMainLabel('Correctness name', samples[index][0], samples[index][1])
+            self.assertEqual(new_main_label_obj.return_the_center_position_of_the_main_window(),
+                             expected_result[index])
+
     def tearDown(self) -> None:
         del self.__tested_main_label_object
 

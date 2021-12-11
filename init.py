@@ -3,6 +3,7 @@ from setting_init import title_for_main_label, multiple_reduction_width_main_lab
 
 
 def gui_init():
-    mian_label = NewMainLabel(title_for_main_label(),
+    main_label = NewMainLabel(title_for_main_label(),
                               multiple_reduction_width_main_label(),
                               multiple_reduction_high_main_label())
+    main_label.mian_loop_for_main_label()

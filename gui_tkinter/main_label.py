@@ -2,7 +2,7 @@ import tkinter
 from gui_tkinter.condition_variable_setting import validation_of_name_setting_conditions_for_main_label
 
 
-class NewMainLabel():
+class NewMainLabel:
     '''
     @:param: title - It is a object string type. Not longer than 60 letter.
     @:param: multiple_reduction_width_main_label - It is a multiple of the reduction of the window width size in
@@ -48,6 +48,3 @@ class NewMainLabel():
 
     def mian_loop_for_main_label(self):
         self.__root.mainloop()
-
-    def return_type_input_data(self, data):
-        return type(data)
