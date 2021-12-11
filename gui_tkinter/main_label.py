@@ -11,20 +11,28 @@ class NewMainLabel:
              relation to the later downloaded screen height resolution
     '''
 
-    def __init__(self, title, multiple_reduction_width_main_label, multiple_reduction_height_mian_label):
+    def __init__(self, program_name, multiple_reduction_width_main_label, multiple_reduction_height_mian_label):
         self.__root = tkinter.Tk()
-        self.title = validation_of_name_setting_conditions_for_main_label(title)
+        self.program_name = validation_of_name_setting_conditions_for_main_label(program_name)
         self.multiple_reduction_width_main_label = multiple_reduction_width_main_label
         self.multiple_reduction_height_mian_label = multiple_reduction_height_mian_label
         self.screen_width, self.screen_height = self.return_screen_resolution()
         self.main_label_window_width, self.main_label_window_height = self.set_size_main_label()
         self.main_width_position, self.main_height_position = self.return_the_center_position_of_the_main_window()
 
+    @property
+    def root(self):
+        return self.__root
+
+    @root.setter
+    def root(self, root):
+        self.__root = root
+
     def return_screen_resolution(self):
         return self.__root.winfo_screenwidth(), self.__root.winfo_screenheight()
 
     def set_title_main_label(self):
-        self.__root.title = self.title
+        self.__root.title(self.program_name)
 
     def set_size_main_label(self):
         return self.screen_width // self.multiple_reduction_width_main_label, \
