@@ -85,11 +85,12 @@ class TestMainLabel(unittest.TestCase):
         self.assertEqual(result, (width, height))
 
     def test_set_size_main_label(self):
-        samples = ((1, 1), (2, 5),)
-        new_main_label_obj = NewMainLabel('Correctness name',
-                                          initiation_test_data[1],
-                                          initiation_test_data[2])
-        pass
+        width, height = pyautogui.size()
+        samples = ((1, 1), (2, 5))
+
+        for sample in samples:
+            new_main_label_obj = NewMainLabel('Correctness name', sample[0], sample[1])
+            self.assertEqual((width // sample[0], height // sample[1]), new_main_label_obj.set_size_main_label())
 
     def tearDown(self) -> None:
         del self.__tested_main_label_object
