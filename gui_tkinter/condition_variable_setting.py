@@ -1,4 +1,4 @@
-from gui_tkinter.main_label_basic_setting import acceptable_datatype_for_title_main_label, max_title_size, \
+from gui_tkinter.main_label.main_label_basic_setting import acceptable_datatype_for_title_main_label, max_title_size, \
     title_above_max_title_size, exception_title_cannot_be_empty, exception_not_allowed_data_type_for_title
 
 '''

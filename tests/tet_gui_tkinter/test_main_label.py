@@ -1,8 +1,6 @@
-import random
-
-from gui_tkinter.main_label import NewMainLabel
+from gui_tkinter.main_label.main_label import NewMainLabel
 from gui_tkinter.condition_variable_setting import validation_of_name_setting_conditions_for_main_label
-from gui_tkinter.main_label_basic_setting import acceptable_datatype_for_title_main_label, \
+from gui_tkinter.main_label.main_label_basic_setting import acceptable_datatype_for_title_main_label, \
     exception_title_cannot_be_empty, title_above_max_title_size
 
 import unittest
