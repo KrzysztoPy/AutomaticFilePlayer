@@ -10,12 +10,20 @@ def get_project_path():
     try:
         return os.getcwd()
     except OSError:
-        view_text(combining_multiple_texts_into_one(os_critical_error_close_program_text(),os_problem_with_get_path()))
+        view_text(combining_multiple_texts_into_one(os_critical_error_close_program_text(),
+                                                    os_problem_get_project_path_text()))
         critical_error_stop_program()
+
 
 def whether_setting_file_exist(setting_file_location_path):
     global setting_file_name
-    return os.path.isfile(setting_file_location_path + '\\' + setting_file_name)
+    try:
+        return os.path.isfile(setting_file_location_path + '\\' + setting_file_name)
+    except OSError:
+        view_text(combining_multiple_texts_into_one(os_critical_error_close_program_text(),
+                                                    os_problem_whether_setting_file_exist_text()))
+        critical_error_stop_program()
+
 
 def critical_error_stop_program():
     exit(0)
