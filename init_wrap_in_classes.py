@@ -1,4 +1,4 @@
-from gui_tkinter.main_label import NewMainLabel
+from gui_tkinter.main_label_func.main_label import NewMainLabel
 from setting_init import title_for_main_label, multiple_reduction_width_main_label, multiple_reduction_high_main_label
 
 
